@@ -12,14 +12,3 @@ map("i", "jk", "<ESC>")
 -- commands to search for commands lol
 map("n", "<leader>fc", "<cmd> Telescope commands <cr>", { desc = "Telescope Commands" })
 map("n", "<leader>fk", "<cmd> Telescope keymaps <cr>", { desc = "Telescope Keymaps" })
-
--- require("nvim-tree").setup({
---   on_attach = function(bufnr)
---     local api = require("nvim-tree.api")
---
---     -- Your custom keymap
---     -- vim.keymap.set('n', '<leader>r', api.tree. , },
---
---     -- You can add more keymaps here
---   end,
--- })

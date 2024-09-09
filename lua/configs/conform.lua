@@ -3,6 +3,7 @@ local options = {
     lua = { "stylua" },
     -- css = { "prettier" },
     -- html = { "prettier" },
+    rust = { "rustfmt" }
   },
 
   format_on_save = {
@@ -11,5 +12,14 @@ local options = {
     lsp_fallback = true,
   },
 }
+
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
+})
+
 
 return options
