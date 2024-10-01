@@ -27,4 +27,15 @@ return {
       },
     },
   },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function()
+      local cmp = require "nvchad.plugins.cmp"
+      return {
+        mapping = {
+          ["<C-p>"] = cmp.mapping.select_next_item(),
+        },
+      }
+    end,
+  },
 }
